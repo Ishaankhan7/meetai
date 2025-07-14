@@ -6,6 +6,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 
+/**
+ * Renders the main authentication UI, allowing users to sign up, log in, view their session, and sign out.
+ *
+ * Displays sign-up and login forms when no user session exists. If a session is active, shows the logged-in user's name and a sign-out button. Handles user input and authentication actions using the `authClient` library.
+ *
+ * @returns The authentication UI as a React element.
+ */
 export default function Home() {
 
   const { data: session } = authClient.useSession()
