@@ -54,7 +54,7 @@ export default function Home() {
       <div className="flex flex-col p-4 gap-y-4">
         <p>Logged in as {session.user.name}</p>
         <Button onClick={() => authClient.signOut()}>
-          sign out;
+          sign out
         </Button>
       </div>
     )
