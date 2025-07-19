@@ -3,7 +3,7 @@ import { AgentGetOne } from "../../types";
 // import { useRouter } from "next/navigation";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
-import { agentsInsertSchema } from "../../scehma";
+import { agentsInsertSchema } from "../../schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
