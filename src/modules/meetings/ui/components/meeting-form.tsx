@@ -129,7 +129,7 @@ export const MeetingForm = ({
                                 id :agent.id,
                                 value:agent.id,
                                 children:(
-                                    <div className="flex-items-center gap-x-2">
+                                    <div className="flex items-center gap-x-2">
                                         <GeneratedAvatar 
                                         seed={agent.name}
                                         variant="botttsNeutral"
