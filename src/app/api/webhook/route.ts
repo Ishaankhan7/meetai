@@ -1,4 +1,4 @@
-import { OpenAI } from "OpenAi";
+import { OpenAI } from "openai";
 // import { ChatCompletionMessage } from "OpenAi/resources/index.mjs";
 import {
     MessageNewEvent,
