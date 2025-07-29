@@ -7,6 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation";
 import { DashboardUserButton } from "./dashboard-user-button";
+import { DashboardTrial } from "./dashboard-trial";
 
 import {
     Sidebar,
@@ -60,21 +61,21 @@ export const DashboardSidebar = () => {
                     <SidebarGroupContent>
                         <SidebarMenu>
                             {
-                                firstSection.map((item)=>(
-                                    <SidebarMenuItem  key={item.href}>
+                                firstSection.map((item) => (
+                                    <SidebarMenuItem key={item.href}>
                                         <SidebarMenuButton
-                                        asChild
-                                        className={cn(
-                                            "h-10 hover:bg-linear-to-r/oklch border border-transparent hove:border-[5D6B68]/10 from-sidebar-accent from-5% via-30% via-sidebar/50 to-sidebar/50",
-                                            pathname === item.href && "bg-linear-to-r/oklach border-[#5D6B68]"
-                                        )}
-                                        isActive={pathname === item.href }
+                                            asChild
+                                            className={cn(
+                                                "h-10 hover:bg-linear-to-r/oklch border border-transparent hove:border-[5D6B68]/10 from-sidebar-accent from-5% via-30% via-sidebar/50 to-sidebar/50",
+                                                pathname === item.href && "bg-linear-to-r/oklach border-[#5D6B68]"
+                                            )}
+                                            isActive={pathname === item.href}
                                         >
                                             <Link href={item.href}>
-                                            <item.icon className="size-5"/>
-                                            <span className="text-sm font-medium tracking-tight">
-                                                {item.label}
-                                            </span>
+                                                <item.icon className="size-5" />
+                                                <span className="text-sm font-medium tracking-tight">
+                                                    {item.label}
+                                                </span>
                                             </Link>
                                         </SidebarMenuButton>
                                     </SidebarMenuItem>
@@ -84,27 +85,27 @@ export const DashboardSidebar = () => {
                     </SidebarGroupContent>
                 </SidebarGroup>
                 <div className="px-4 py-2">
-                <Separator className="opacity-10 text-[#5D6B68]" />
-            </div>
+                    <Separator className="opacity-10 text-[#5D6B68]" />
+                </div>
                 <SidebarGroup>
                     <SidebarGroupContent>
                         <SidebarMenu>
                             {
-                                secondSection.map((item)=>(
-                                    <SidebarMenuItem  key={item.href}>
+                                secondSection.map((item) => (
+                                    <SidebarMenuItem key={item.href}>
                                         <SidebarMenuButton
-                                        asChild
-                                        className={cn(
-                                            "h-10 hover:bg-linear-to-r/oklch border border-transparent hove:border-[5D6B68]/10 from-sidebar-accent from-5% via-30% via-sidebar/50 to-sidebar/50",
-                                            pathname === item.href && "bg-linear-to-r/oklach border-[#5D6B68]"
-                                        )}
-                                        isActive={pathname === item.href }
+                                            asChild
+                                            className={cn(
+                                                "h-10 hover:bg-linear-to-r/oklch border border-transparent hove:border-[5D6B68]/10 from-sidebar-accent from-5% via-30% via-sidebar/50 to-sidebar/50",
+                                                pathname === item.href && "bg-linear-to-r/oklach border-[#5D6B68]"
+                                            )}
+                                            isActive={pathname === item.href}
                                         >
                                             <Link href={item.href}>
-                                            <item.icon className="size-5"/>
-                                            <span className="text-sm font-medium tracking-tight">
-                                                {item.label}
-                                            </span>
+                                                <item.icon className="size-5" />
+                                                <span className="text-sm font-medium tracking-tight">
+                                                    {item.label}
+                                                </span>
                                             </Link>
                                         </SidebarMenuButton>
                                     </SidebarMenuItem>
@@ -115,7 +116,8 @@ export const DashboardSidebar = () => {
                 </SidebarGroup>
             </SidebarContent>
             <SidebarFooter className="text-white">
-                <DashboardUserButton />
+                    <DashboardTrial />
+                    <DashboardUserButton />
             </SidebarFooter>
         </Sidebar>
     )
