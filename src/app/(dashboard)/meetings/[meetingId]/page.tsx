@@ -27,10 +27,9 @@ const Page = async({ params }:Props)=>{
     const queryClient = getQueryClient();
     void queryClient.prefetchQuery(
         trpc.meetings.getOne.queryOptions({id:meetingId}),
-    )
+    );
 
     return(
-
             <HydrationBoundary state={dehydrate(queryClient)}>
                 <Suspense fallback= {<MeetingsIdViewLoading />}>
                     <ErrorBoundary fallback= {<MeetingsIdViewError />}>
@@ -38,7 +37,6 @@ const Page = async({ params }:Props)=>{
                     </ErrorBoundary>
                 </Suspense>
             </HydrationBoundary>
-
     )
 }
 
